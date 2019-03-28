@@ -1,0 +1,8 @@
+{
+  "name": "botcamp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lucas2502/botCamp-impulsoNetwork",
+  "author": "LucasGonçalves",
+  "license": "MIT"
+}
