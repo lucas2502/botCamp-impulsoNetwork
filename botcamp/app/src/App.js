@@ -1,9 +1,16 @@
-import React, { component } from "react"
-import "./App.css"
+import React, { Component } from "react";
 
-class App extends component {
+import LogoBotcamp from "./components/LogoBotcamp";
+import BtnBotcamp from './components/BtnBotcamp';
+
+class App extends Component {
     render() {
-        return <button className="btn-botcamp">Entrar</button>
+        return (
+            <>
+                <LogoBotcamp />
+                <BtnBotcamp />
+            </>
+        )
     }
 }
 
