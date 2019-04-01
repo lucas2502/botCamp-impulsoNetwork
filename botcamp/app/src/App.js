@@ -2,14 +2,20 @@ import React, { Component } from "react";
 
 import LogoBotcamp from "./components/LogoBotcamp";
 import BtnBotcamp from './components/BtnBotcamp';
+import LoginWrapper from "./components/LoginWrapper";
+
+import "./styles/style.css"
+
 
 class App extends Component {
     render() {
         return (
-            <>
-                <LogoBotcamp />
-                <BtnBotcamp />
-            </>
+            
+                <LoginWrapper >
+                    <LogoBotcamp />
+                    <BtnBotcamp />
+                </LoginWrapper>
+            
         )
     }
 }

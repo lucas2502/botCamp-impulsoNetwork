@@ -6,4 +6,11 @@
     color: #fff;
     background-color: #ee3e25;
     text-transform: uppercase;
+    margin: 0px 47px 80px 50px;
+}
+
+.btn-botcamp:hover{
+    color: #ee3e25;
+    background-color: #fff;
+    opacity: 0.7;
 }
