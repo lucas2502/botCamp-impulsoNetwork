@@ -1,9 +1,22 @@
-import React, { component } from "react"
+import React, { Component } from "react";
+
+import LogoBotcamp from "./components/LogoBotcamp";
+import BtnBotcamp from './components/BtnBotcamp';
+import LoginWrapper from "./components/LoginWrapper";
+
+import "./styles/style.css"
 
 
-class App extends component {
+class App extends Component {
     render() {
-        return <button>Entrar</button>
+        return (
+            
+                <LoginWrapper >
+                    <LogoBotcamp />
+                    <BtnBotcamp />
+                </LoginWrapper>
+            
+        )
     }
 }
 
