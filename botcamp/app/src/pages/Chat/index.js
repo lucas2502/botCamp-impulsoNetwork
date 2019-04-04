@@ -2,14 +2,14 @@ import React from "react";
 
 import ChatWrapper from "../../components/ChatWeapper";
 import ChatHeader  from "../../components/ChatHeader";
-import ChatLogo from "../../components/ChatLogo";
 import ChatLougout from "../../components/ChatLogout";
+import LogoBotcamp from "../../components/LogoBotcamp";
 
 
 const Chat = () => (
     <ChatWrapper>
         <ChatHeader>
-            <ChatLogo />
+            <LogoBotcamp small />
             <ChatLougout />
         </ChatHeader>
     </ChatWrapper>
