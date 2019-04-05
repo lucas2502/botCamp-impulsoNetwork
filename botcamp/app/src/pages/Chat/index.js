@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 import ChatWrapper from "../../components/ChatWeapper";
 import ChatHeader  from "../../components/ChatHeader";
@@ -14,7 +15,9 @@ const Chat = () => (
     <ChatWrapper>
         <ChatHeader>
             <LogoBotcamp small />
-            <ChatLougout />
+            <Link to="/">
+                <ChatLougout />
+            </Link>
         </ChatHeader>
         <FooterChat>
             <ChatInput/>

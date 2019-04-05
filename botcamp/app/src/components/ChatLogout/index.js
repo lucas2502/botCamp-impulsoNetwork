@@ -9,6 +9,9 @@ const ChatLougout = styled.img.attrs({
     width: 30px;
     height: 30px;
     padding: 11px 22px 30px;
+    :hover {
+        opacity:0.8;
+    }
 `;
 
 export default ChatLougout;
