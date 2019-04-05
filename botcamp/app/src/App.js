@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import "./styles/style.css"
 import Login from "./pages/Login";
-import Chat from "./pages/Chat"
 
 
 class App extends Component {
@@ -13,4 +12,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default App;
