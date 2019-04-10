@@ -7,11 +7,7 @@ import Login from "./pages/Login";
 
 class App extends Component {
     render() {
-        return (
-                <Link to="/Chat">
-                    <Login/>
-                </Link>
-        )
+        return <Login/>
     }
 }
 

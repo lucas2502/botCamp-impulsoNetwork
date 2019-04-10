@@ -7,7 +7,7 @@ const LogoBotcamp = styled.img.attrs({
 }) `
     width: ${props => (props.small ? "200px" : "248px")};
     height: ${props => (props.small ? "31.5px" : "39px")};
-    padding: ${props => (props.small ? "10px 16px 24.5px" : "120px 63px 378px 64px")};
-`;
+    padding: ${props => (props.small ? "" : "120px 63px 378px 64px")};
+    `;
 
 export default LogoBotcamp;
