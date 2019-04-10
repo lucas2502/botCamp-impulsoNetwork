@@ -9,6 +9,7 @@ const BtnAttachment = styled.img.attrs({
     width: 38px;
     height: 38px;
     padding: 5px 7px;
+    display: flex;
 `;
 
 export default BtnAttachment;

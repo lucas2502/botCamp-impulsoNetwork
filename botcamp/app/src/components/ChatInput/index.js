@@ -15,6 +15,10 @@ const ChatInput = styled.input.attrs({
     position: absolute;
     bottom: 0;
     padding: 14px 11px 14px 16px;
+
+    ::after{
+        
+    }
 `;
 
 export default ChatInput;
