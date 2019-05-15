@@ -9,6 +9,7 @@ import FooterChat from "../../components/FooterChat";
 import ChatInput from "../../components/ChatInput";
 import BtnAttachment from "../../components/BtnAttachment";
 import BtnMicrophone from "../../components/BtnMicrophone";
+import MessageBotcamp from "../../components/MessageBotCamp";
 
 
 const Chat = () => (
@@ -19,6 +20,9 @@ const Chat = () => (
                 <ChatLougout />
             </Link>
         </ChatHeader>
+        <div>
+            <MessageBotcamp />
+        </div>
         <FooterChat>
             <ChatInput/>
             <BtnAttachment />
