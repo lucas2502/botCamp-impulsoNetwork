@@ -21,7 +21,7 @@ const Chat = () => (
             </Link>
         </ChatHeader>
         <div>
-            <MessageBotcamp />
+            <MessageBotcamp>!cpf</MessageBotcamp>
         </div>
         <FooterChat>
             <ChatInput/>
