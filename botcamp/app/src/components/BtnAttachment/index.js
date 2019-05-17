@@ -8,6 +8,7 @@ const BtnAttachment = styled.img.attrs({
 })`
     width: 28px;
     padding: 5px 7px;
+    bottom: 0%;
     display: flex;
 `;
 

@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from "styled-components";
 
-const ChatInput = styled.input.attrs({
+const Input = styled.input.attrs({
     type: "text",
     placeholder: "Diz aí..."
 })`
@@ -20,5 +21,12 @@ const ChatInput = styled.input.attrs({
         
     }
 `;
+
+
+
+const ChatInput = () => (
+    <Input />
+);
+
 
 export default ChatInput;

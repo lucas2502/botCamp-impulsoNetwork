@@ -14,7 +14,7 @@ const MessageBotcamp = styled.p`
     border-radius: ${ props => props.primary ? 
         "10px 0 10px 10px" : 
         "0 10px 10px 10px"};
-
+    display: flex;
     &:first-child {
         margin-top: 50px;
     }
