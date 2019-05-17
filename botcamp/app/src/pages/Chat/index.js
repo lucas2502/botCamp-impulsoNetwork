@@ -10,6 +10,8 @@ import ChatInput from "../../components/ChatInput";
 import BtnAttachment from "../../components/BtnAttachment";
 import BtnMicrophone from "../../components/BtnMicrophone";
 import MessageBotcamp from "../../components/MessageBotCamp";
+import BtnRobot from "../../components/BtnRobot";
+import ChatBackgorund from "../../components/ChatBackground";
 
 
 const Chat = () => (
@@ -21,10 +23,12 @@ const Chat = () => (
             </Link>
         </ChatHeader>
         <div>
-            <MessageBotcamp>!cpf</MessageBotcamp>
-            <MessageBotcamp>!rg</MessageBotcamp>
-            <MessageBotcamp>!end</MessageBotcamp>
+            <MessageBotcamp primary >!cpf</MessageBotcamp>
         </div>
+        <ChatBackgorund>
+            <BtnRobot />
+            <MessageBotcamp>000.000.000-00</MessageBotcamp>
+        </ChatBackgorund>
         <FooterChat>
             <ChatInput/>
             <BtnAttachment />

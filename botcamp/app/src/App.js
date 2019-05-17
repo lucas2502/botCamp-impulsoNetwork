@@ -11,7 +11,7 @@ class App extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" component={Login} />
-                    <Route path="/Chat" component={Chat} />
+                    <Route path="/chat" component={Chat} />
                     <Route path="*" component={Login} />
                 </Switch>
             </BrowserRouter>    
@@ -29,3 +29,8 @@ class App extends Component {
 }
 
 export default App;*/
+
+/**
+ * chat robot
+ * send message by enter
+ */
