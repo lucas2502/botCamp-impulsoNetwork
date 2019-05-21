@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 
 import ChatWrapper from "../../components/ChatWeapper";
@@ -14,41 +14,14 @@ import BtnRobot from "../../components/BtnRobot";
 import ChatBackground from "../../components/ChatBackground";
 
 
-class Chat extends Component {
-   
-    state = {
-        commandMessages: [],
-        searchInputText: '',
-        id: 1
-    }
+const Chat = () => {
+        
+        const [messages,setMessages] = useState([]);
 
-    onKeyDown = (e) => {
-        console.log(e.key);
-        if (e.key === 'Enter' ) {
-            
-            const { commandMessages, searchInputText , id } = this.state
-
-            this.setStates({
-                commandMessages: [
-                    ...commandMessages,
-                    {
-                        id,
-                        text: searchInputText
-                    }
-                ],
-                searchInputText: '',
-                id: id + 1,
-            })
-        }
-    }
-
-    onChange = (e) => {
-        this.setState({ searchInputText: e.target.value })
-    }
-
-   render(){
-
-    const { commandMessages, searchInputText } = this.state
+        const addMessage = message => setMessages([
+            ...messages, 
+            message
+        ]);
 
        return (
             <ChatWrapper>
@@ -58,29 +31,28 @@ class Chat extends Component {
                         <ChatLougout />
                     </Link>
                 </ChatHeader>
+
                 <ChatBackground>
+                    <MessageBotcamp primary >!cpf</MessageBotcamp>
+                    <BtnRobot/><MessageBotcamp>000.000.000-00</MessageBotcamp>
                     {
-                        commandMessages.map(
-                            message => 
-                            <MessageBotcamp primary key={message.id}> 
-                                {message.text} 
-                            </MessageBotcamp>)
+                        messages.map((message, i) => (
+                            <MessageBotcamp key={i}>{message}</MessageBotcamp>
+                        ))
                     }
+                    
                 </ChatBackground>
+
                 <FooterChat>
                     <ChatInput 
-                        onKeyDown={this.onKeyDown}
-                        onChange={this.onChange}
-                        value={searchInputText}
-                    />
+                        addMessage={addMessage}
+                        />
                     <BtnAttachment />
                     <BtnMicrophone />
                 </FooterChat>
             </ChatWrapper>
        );
     }
-   
-};
 
 
 export default Chat;

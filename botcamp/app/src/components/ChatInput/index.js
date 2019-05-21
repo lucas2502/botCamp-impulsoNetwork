@@ -1,10 +1,17 @@
-import React from 'react';
 import styled from "styled-components";
 
-const Input = styled.input.attrs({
-    type: "text",
-    placeholder: "Diz aí..."
-})`
+const onKeyDown = ({ event, currentTarget}, addMessage) => {
+    if( event ==+ 13){
+        addMessage(currentTarget.value)
+        currentTarget.value = ''
+    }
+}
+
+const ChatInput = styled.input.attrs(({ addMessage }) => ({
+    type: 'text',
+    placeholder: 'Diz aí...',
+    onKeyDown: event => onKeyDown(event, addMessage)
+}))`
     box-sizing: border-box;
     border: none;
     font-size: 20px;
@@ -21,12 +28,5 @@ const Input = styled.input.attrs({
         
     }
 `;
-
-
-
-const ChatInput = () => (
-    <Input />
-);
-
 
 export default ChatInput;
