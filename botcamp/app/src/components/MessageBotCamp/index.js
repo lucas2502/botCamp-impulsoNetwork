@@ -7,15 +7,12 @@ const MessageBotcamp = styled.p`
     color: ${props => props.primary ? "#fff" : "#000"};
     padding: 10px 15px;
     width: 68%;
-    margin: 0 16px 20px 10px;
-    margin-left: ${props => props.primary ? "auto" : "" };
-    margin-right: ${props => props.primary ? "" : "auto" };
-    margin-top: 30px;
+    margin: 0 10px 20px ${props => props.primary ? "auto" : "10px"};
     border-radius: ${ props => props.primary ? 
         "10px 0 10px 10px" : 
         "0 10px 10px 10px"};
     display: flex;
-    
+    border: 1px solid #d7d7ea;
     &:first-child {
         margin-top: 50px;
     }
