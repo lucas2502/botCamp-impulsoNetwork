@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+
+
 const ChatInput = styled.input.attrs({
-    type: "text",
-    placeholder: "Diz aí..."
+    type: 'text',
+    placeholder: 'Diz aí...'
 })`
     box-sizing: border-box;
     border: none;

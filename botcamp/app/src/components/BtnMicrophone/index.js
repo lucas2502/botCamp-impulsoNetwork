@@ -11,6 +11,7 @@ const BtnMicrophone = styled.img.attrs({
     box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #ee3e25;
     padding: 10px 11px;
+    bottom: 0;
     display: flex;
 `;
 
