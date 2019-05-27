@@ -15,6 +15,7 @@ const MessageBotcamp = styled.p`
         "10px 0 10px 10px" : 
         "0 10px 10px 10px"};
     display: flex;
+    
     &:first-child {
         margin-top: 50px;
     }

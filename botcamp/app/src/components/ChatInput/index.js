@@ -1,17 +1,11 @@
 import styled from "styled-components";
 
-const onKeyDown = ({ event, currentTarget}, addMessage) => {
-    if( event ==+ 13){
-        addMessage(currentTarget.value)
-        currentTarget.value = ''
-    }
-}
 
-const ChatInput = styled.input.attrs(({ addMessage }) => ({
+
+const ChatInput = styled.input.attrs({
     type: 'text',
-    placeholder: 'Diz aí...',
-    onKeyDown: event => onKeyDown(event, addMessage)
-}))`
+    placeholder: 'Diz aí...'
+})`
     box-sizing: border-box;
     border: none;
     font-size: 20px;

@@ -10,18 +10,16 @@ import ChatInput from "../../components/ChatInput";
 import BtnAttachment from "../../components/BtnAttachment";
 import BtnMicrophone from "../../components/BtnMicrophone";
 import MessageBotcamp from "../../components/MessageBotCamp";
-import BtnRobot from "../../components/BtnRobot";
+import AvatarRobot from "../../components/AvatarRobot";
 import ChatBackground from "../../components/ChatBackground";
 
 
 const Chat = () => {
         
-        const [messages,setMessages] = useState([]);
-
-        const addMessage = message => setMessages([
-            ...messages, 
-            message
-        ]);
+        const handleKeyUp = (event) => {
+            if (event.keyCode == 13) return this.sendData()
+            console.log(event.keyCode)
+        }
 
        return (
             <ChatWrapper>
@@ -31,22 +29,16 @@ const Chat = () => {
                         <ChatLougout />
                     </Link>
                 </ChatHeader>
-
                 <ChatBackground>
                     <MessageBotcamp primary >!cpf</MessageBotcamp>
-                    <BtnRobot/><MessageBotcamp>000.000.000-00</MessageBotcamp>
-                    {
-                        messages.map((message, i) => (
-                            <MessageBotcamp key={i}>{message}</MessageBotcamp>
-                        ))
-                    }
-                    
+                </ChatBackground>
+
+                <ChatBackground>
+                    <AvatarRobot/><MessageBotcamp>000.000.000-00</MessageBotcamp>
                 </ChatBackground>
 
                 <FooterChat>
-                    <ChatInput 
-                        addMessage={addMessage}
-                        />
+                    <ChatInput />
                     <BtnAttachment />
                     <BtnMicrophone />
                 </FooterChat>
