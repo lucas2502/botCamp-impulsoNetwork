@@ -10,14 +10,33 @@ import ChatInput from "../../components/ChatInput";
 import BtnAttachment from "../../components/BtnAttachment";
 import BtnMicrophone from "../../components/BtnMicrophone";
 import MessageBotcamp from "../../components/MessageBotCamp";
-import AvatarRobot from "../../components/AvatarRobot";
 import MessageWrapper from "../../components/MessageWrapper";
 import AvatarMessage from "../../components/AvatarMessage";
 
 
+
 const Chat = () => {
 
+    const [typing, setTyping] = useState("");
+    const [messages, setMessages] = useState([]);
+
+
+    const handeSubmit = (event) => {
+        event.preventDefault();
+        //messages.push(typing);
+        setMessages([typing]);
+        setTyping("");
+
+        console.log(messages)
+    }
+
+    const handleChange = (event) => {
+        event.preventDefault();
+        setTyping(event.target.value);
+    }
+    
        return (
+           <>
             <ChatWrapper>
                 <ChatHeader>
                     <LogoBotcamp small />
@@ -27,18 +46,21 @@ const Chat = () => {
                 </ChatHeader>
                 
                 <MessageWrapper>
-                    <MessageBotcamp primary >!cpf</MessageBotcamp>
-                    <AvatarMessage content="00.000.000-00"/>
+                    {
+                        messages.map(msg => <MessageBotcamp primary >{msg}</MessageBotcamp>)
+                    }
+                    
                 </MessageWrapper>
 
-                <FormMessage>
-                    <ChatInput />
+                <FormMessage onSubmit={handeSubmit}>
+                    <ChatInput value={typing} onChange={handleChange}/>
                     <BtnAttachment />
                     <BtnMicrophone />
                 </FormMessage>
             </ChatWrapper>
-       );
-    }
+        </>
+       )
+}
 
 
 export default Chat;
