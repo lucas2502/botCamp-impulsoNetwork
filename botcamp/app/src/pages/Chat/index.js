@@ -14,6 +14,14 @@ import AvatarRobot from "../../components/AvatarRobot";
 import MessageWrapper from "../../components/MessageWrapper";
 import AvatarMessage from "../../components/AvatarMessage";
 
+const handeSubmit = (event) => {
+    event.preventDefault();
+}
+
+const handleChange = (event) => {
+    event.preventDefault();
+    console.log(event.target.value)
+}
 
 const Chat = () => {
 
@@ -31,8 +39,8 @@ const Chat = () => {
                     <AvatarMessage content="00.000.000-00"/>
                 </MessageWrapper>
 
-                <FormMessage>
-                    <ChatInput />
+                <FormMessage onSubmit={handeSubmit}>
+                    <ChatInput onChange={handleChange}/>
                     <BtnAttachment />
                     <BtnMicrophone />
                 </FormMessage>
