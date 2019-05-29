@@ -15,28 +15,28 @@ import AvatarMessage from "../../components/AvatarMessage";
 
 
 
-const Chat = () => {
 
+
+
+const Chat = () => {
     const [typing, setTyping] = useState("");
     const [messages, setMessages] = useState([]);
+    
 
-
-    const handeSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        //messages.push(typing);
-        setMessages([typing]);
+        setMessages([typing])
         setTyping("");
-
-        console.log(messages)
-    }
-
-    const handleChange = (event) => {
-        event.preventDefault();
-        setTyping(event.target.value);
+    
+        console.log("messages:",messages)
     }
     
-       return (
-           <>
+    const handleChange = (event) => {
+        setTyping(event.target.value);
+        console.log("typing: ", typing)
+    }
+    
+    return (
             <ChatWrapper>
                 <ChatHeader>
                     <LogoBotcamp small />
@@ -47,19 +47,17 @@ const Chat = () => {
                 
                 <MessageWrapper>
                     {
-                        messages.map(msg => <MessageBotcamp primary >{msg}</MessageBotcamp>)
+                        messages.map((msg, key) => <MessageBotcamp primary key={key}>{msg}</MessageBotcamp>)
                     }
-                    
                 </MessageWrapper>
 
-                <FormMessage onSubmit={handeSubmit}>
+                <FormMessage onSubmit={handleSubmit}>
                     <ChatInput value={typing} onChange={handleChange}/>
                     <BtnAttachment />
                     <BtnMicrophone />
                 </FormMessage>
             </ChatWrapper>
-        </>
-       )
+       );
 }
 
 
