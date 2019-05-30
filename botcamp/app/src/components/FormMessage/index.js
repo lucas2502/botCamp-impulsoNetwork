@@ -6,6 +6,7 @@ width: 100vw;
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+    
 `;
 
 export default FormMessage;

@@ -7,15 +7,15 @@ import ChatLougout from "../../components/ChatLogout";
 import LogoBotcamp from "../../components/LogoBotcamp";
 import FormMessage from "../../components/FormMessage";
 import ChatInput from "../../components/ChatInput";
-import BtnAttachment from "../../components/BtnAttachment";
 import BtnMicrophone from "../../components/BtnMicrophone";
 import MessageBotcamp from "../../components/MessageBotCamp";
 import MessageWrapper from "../../components/MessageWrapper";
 import AvatarMessage from "../../components/AvatarMessage";
 
+import BtnAttachment from "../../components/BtnAttachment";
 
 
-
+import FileUpload from '../../components/UploadFile'
 
 
 const Chat = () => {
@@ -52,10 +52,12 @@ const Chat = () => {
                 </MessageWrapper>
 
                 <FormMessage onSubmit={handleSubmit}>
+                <BtnMicrophone />
                     <ChatInput value={typing} onChange={handleChange}/>
-                    <BtnAttachment />
-                    <BtnMicrophone />
+                    
                 </FormMessage>
+
+                <FileUpload  />
             </ChatWrapper>
        );
 }
